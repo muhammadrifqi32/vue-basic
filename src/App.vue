@@ -1,33 +1,43 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <div>
-    <!-- <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a> -->
-  <h1 class="text-blue-500 text-lg">
-    fish
-  </h1>
+    <Login data-theme="pastel"></Login>
   </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <!-- <div class="border-2 border-blue-600" data-theme="light">
+    <Dashboard
+      :Days="Days"
+      Text="Text from App"
+      Color="secondary"
+      class="border-2 border-green-500 m-2"
+    >
+      <p>This is from app</p>
+    </Dashboard>
+  </div> -->
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script>
+// import Dashboard from "./components/Dashboard.vue";
+import Login from "./components/Auth/Login.vue";
+export default {
+  components: {
+    //untuk manggil
+    // Dashboard,
+    Login,
+  },
+  setup() {
+    //deklarasi variable
+    // const Days = [
+    //   "Monday",
+    //   "Tuesday",
+    //   "Wednesday",
+    //   "Thursday",
+    //   "Friday",
+    //   "Saturday",
+    //   "Sunday",
+    // ];
+    // return { Days }; //agar variable yang udah di deklarasi bisa dipanggil.
+    return {};
+  },
+};
+</script>
+
+<style lang="scss" scoped></style>

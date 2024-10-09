@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <Login data-theme="pastel"></Login>
+  <div class="w-screen h-screen" data-theme="pastel">
+    <RouterView></RouterView>
+    <!-- <Login data-theme="pastel"></Login> -->
+     <!-- <MainLayout></MainLayout> -->
   </div>
   <!-- <div class="border-2 border-blue-600" data-theme="light">
     <Dashboard
@@ -15,13 +17,16 @@
 </template>
 
 <script>
+// import MainLayout from './components/MainLayout/MainLayout.vue';
 // import Dashboard from "./components/Dashboard.vue";
-import Login from "./components/Auth/Login.vue";
+// import Login from "./components/Auth/Login.vue";
+// import { RouterView } from "vue-router";
 export default {
   components: {
     //untuk manggil
     // Dashboard,
-    Login,
+    // Login,
+    // MainLayout
   },
   setup() {
     //deklarasi variable

@@ -63,6 +63,7 @@
 <script>
 import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/solid";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
   components: {
@@ -70,6 +71,7 @@ export default {
     EyeSlashIcon,
   },
   setup() {
+    const router = useRouter();
     const stateLogin = ref(false);
     const username = ref("");
     const password = ref("");
@@ -102,6 +104,7 @@ export default {
         // Hide toast after 3 seconds
         setTimeout(() => {
           stateLogin.value = false;
+          router.push('/dashboard');
         }, 2000);
       }
     };

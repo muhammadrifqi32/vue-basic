@@ -1,9 +1,12 @@
 <template>
-  <Navbar />
-  <Sidebar />
-  <div class="content">
-    <!-- This will render the child view, e.g., Dashboard -->
-    <router-view />
+  <div class="min-h-screen flex">
+    <!-- Sidebar always stays to the left -->
+    <Sidebar class="w-1/5" />
+    <div class="w-4/5">
+      <Navbar />
+      <!-- Child content goes here -->
+      <router-view class="border-2 border-black" />
+    </div>
   </div>
 </template>
 

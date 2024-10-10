@@ -101,11 +101,14 @@ export default {
         error.value = false;
         stateLogin.value = true;
 
+        // Store the username in localStorage
+        localStorage.setItem("username", username.value);
+
         // Hide toast after 3 seconds
         setTimeout(() => {
           stateLogin.value = false;
-          router.push('/dashboard');
-        }, 2000);
+          router.push("/page/account");
+        }, 1000);
       }
     };
 

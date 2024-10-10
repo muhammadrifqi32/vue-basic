@@ -1,7 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Login from "../components/Auth/Login.vue";
-import Dashboard from "../components/Dashboard.vue";
+// import Dashboard from "../components/Dashboard.vue";
 import MainLayout from "../components/MainLayout/MainLayout.vue"; // Import MainLayout
+import Department from "../components/Menu/Department.vue";
+import Account from "../components/Menu/Account.vue";
 
 const routes = [
   {
@@ -10,13 +12,18 @@ const routes = [
     name: "login",
   },
   {
-    path: "/app", // Authenticated routes with MainLayout wrapper
+    path: "/page", // Authenticated routes with MainLayout wrapper
     component: MainLayout, // MainLayout as the wrapper
     children: [
       {
-        path: "dashboard", // This will be accessible as /app/dashboard
-        component: Dashboard,
-        name: "dashboard",
+        path: "account", // This will be accessible as /app/dashboard
+        component: Account,
+        name: "account",
+      },
+      {
+        path: "department", // This will be accessible as /app/dashboard
+        component: Department,
+        name: "department",
       },
     ],
   },

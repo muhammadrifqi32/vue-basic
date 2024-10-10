@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen" data-theme="pastel">
+  <div data-theme="light">
     <RouterView></RouterView>
     <!-- <Login data-theme="pastel"></Login> -->
      <!-- <MainLayout></MainLayout> -->
